@@ -1,5 +1,4 @@
 const galleryImages = [
-  { src: `${import.meta.env.BASE_URL}images/living-room.jpg`, alt: "Living room" },
   { src: `${import.meta.env.BASE_URL}images/dining.jpg`, alt: "Dining room" },
   { src: `${import.meta.env.BASE_URL}images/kitchen.jpg`, alt: "Kitchen" },
   { src: `${import.meta.env.BASE_URL}images/bedroom.jpg`, alt: "Bedroom" }
@@ -35,14 +34,15 @@ function Home() {
             Wi-Fi password: <strong>1234Oakwood!</strong>
           </li>
           <li>Quiet hours: 10 PM – 8 AM</li>
-          <li>Check-out: 11:00 AM</li>
+          <li>Check-in: 4 PM</li>
+          <li>Check-out: 11 AM</li>
         </ul>
       </section>
 
       <section className="info-card">
         <h3>Parking</h3>
         <p>
-          Please park in the driveway spaces only. Street parking is not allowed per HOA, so kindly stay
+          Please park in the driveway spaces only. Street parking is not allowed per  guidelines, so kindly stay
           within the driveway or garage area to avoid violations.
         </p>
       </section>

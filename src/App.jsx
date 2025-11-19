@@ -11,11 +11,16 @@ function App() {
           <p>Guest guide and house manual</p>
         </div>
         <nav className="main-nav">
-          <NavLink end to="/" className={({ isActive }) => (isActive ? "active" : "")}
+          <NavLink
+            end
+            to="/"
+            className={({ isActive }) => (isActive ? "active" : "")}
           >
             Property Info
           </NavLink>
-          <NavLink to="/how-to" className={({ isActive }) => (isActive ? "active" : "")}
+          <NavLink
+            to="/how-to"
+            className={({ isActive }) => (isActive ? "active" : "")}
           >
             How-To Guides
           </NavLink>

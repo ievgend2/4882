@@ -1,4 +1,4 @@
-# Oakwood Retreat Guide
+# 4882 Retreat Guide
 
 Simple Vite + React house manual for 4882 Retreat guests. The app is optimized for mobile, uses HashRouter for reliable GitHub Pages routing, and keeps styling lightweight with a single CSS file.
 
@@ -40,5 +40,6 @@ The repository ships with placeholder photos at:
 - `public/images/dining.jpg`
 - `public/images/kitchen.jpg`
 - `public/images/bedroom.jpg`
+- `public/images/front.jpeg`
 
 Replace these files with property photos (keep the same filenames). Because the app uses `HashRouter`, routed URLs keep working on GitHub Pages without extra configuration.
