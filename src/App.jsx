@@ -1,6 +1,8 @@
 import { NavLink, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home.jsx";
+import HouseRules from "./pages/HouseRules.jsx";
 import HowTo from "./pages/HowTo.jsx";
+import Places from "./pages/Places.jsx";
 
 function App() {
   return (
@@ -19,10 +21,22 @@ function App() {
             Property Info
           </NavLink>
           <NavLink
+            to="/house-rules"
+            className={({ isActive }) => (isActive ? "active" : "")}
+          >
+            House Rules
+          </NavLink>
+          <NavLink
             to="/how-to"
             className={({ isActive }) => (isActive ? "active" : "")}
           >
             How-To Guides
+          </NavLink>
+          <NavLink
+            to="/places"
+            className={({ isActive }) => (isActive ? "active" : "")}
+          >
+            Local Spots
           </NavLink>
         </nav>
       </header>
@@ -30,7 +44,9 @@ function App() {
       <main>
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/house-rules" element={<HouseRules />} />
           <Route path="/how-to" element={<HowTo />} />
+          <Route path="/places" element={<Places />} />
         </Routes>
       </main>
 
