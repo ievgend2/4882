@@ -1,5 +1,22 @@
 const howToData = [
   {
+    id: "schlage-encode-plus",
+    title: "Front Door – Schlage Encode Plus Smart Lock",
+    description: "How to unlock and lock the front door with your code.",
+    steps: [
+      "Your unique door code is sent to you in the Airbnb app and in your check-in message. Please do not share it with anyone.",
+      "To WAKE UP the lock, tap the Schlage logo at the top of the keypad if the buttons are dark.",
+      "Enter your personal 4–8 digit code slowly and firmly. The numbers will light up as you press them.",
+      "After you enter the full code, wait for the green check mark / light and the lock will click.",
+      "Turn the door handle and pull/push the door open.",
+      "To LOCK the door when you leave, close the door fully and press the Schlage logo once. Wait for the lock to turn and click.",
+      "If the lock flashes red and beeps, the code was entered incorrectly. Wait a moment, then try again.",
+      "If the keypad does not light up, the batteries may be low. Try again once more and then contact us via Airbnb if it still does not respond.",
+      "Always make sure the door is fully closed and latched before locking so the bolt doesn't get stuck.",
+      "For your security, the code is changed regularly between guests.",
+    ],
+  },
+  {
     title: "Mr. Coffee Perfect Brew – How to Use",
     description: "How to brew a pot of coffee.",
     steps: [
@@ -13,8 +30,8 @@ const howToData = [
       "Press the Brew/Cancel button to start.",
       "When brewing is finished, remove the carafe carefully and enjoy your coffee.",
       "Clean the filter basket and its holder after each brew.",
-      "Do NOT put the carafe in the dishwasher."
-    ]
+      "Do NOT put the carafe in the dishwasher.",
+    ],
   },
   {
     title: "Living Room TV – How to Use",
@@ -27,8 +44,8 @@ const howToData = [
       "Select your app (e.g. Netflix, YouTube, etc.) and press OK/Enter.",
       "Log in with your own account if needed. Remember to log out at the end of your stay.",
       "To adjust volume, use the Volume +/- buttons on the remote.",
-      "To turn off the TV, press the Power button once."
-    ]
+      "To turn off the TV, press the Power button once.",
+    ],
   },
   {
     title: "Wi-Fi & Internet",
@@ -38,8 +55,8 @@ const howToData = [
       "Select the network “OakwoodGuest”.",
       "Enter the password “1234Oakwood!” exactly as written (case-sensitive).",
       "If the connection fails, toggle Wi-Fi off and on and try again.",
-      "If you still have issues, please text us."
-    ]
+      "If you still have issues, please text us.",
+    ],
   },
   {
     title: "Trash & Recycling",
@@ -48,9 +65,9 @@ const howToData = [
       "Kitchen trash goes into the under-sink trash bin.",
       "Bagged trash can be taken to the outside bin next to the driveway.",
       "Clean paper, cans, and bottles can go into the blue recycling bin.",
-      "Please do not leave trash bags outside the door (animals may tear them open)."
-    ]
-  }
+      "Please do not leave trash bags outside the door (animals may tear them open).",
+    ],
+  },
 ];
 
 export default howToData;
