@@ -33,4 +33,12 @@ Open the local URL that Vite prints in your terminal.
 4. **Future updates**  
    Push your code changes to `main` and re-run `npm run deploy` whenever you want to refresh the live site.
 
-Because the app uses `HashRouter`, routed URLs keep working on GitHub Pages without extra configuration.
+### Images
+
+The repository ships with placeholder photos at:
+- `public/images/living-room.jpg`
+- `public/images/dining.jpg`
+- `public/images/kitchen.jpg`
+- `public/images/bedroom.jpg`
+
+Replace these files with property photos (keep the same filenames). Because the app uses `HashRouter`, routed URLs keep working on GitHub Pages without extra configuration.

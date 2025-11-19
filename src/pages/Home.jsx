@@ -1,4 +1,5 @@
 const galleryImages = [
+  { src: `${import.meta.env.BASE_URL}images/living-room.jpg`, alt: "Living room" },
   { src: `${import.meta.env.BASE_URL}images/dining.jpg`, alt: "Dining room" },
   { src: `${import.meta.env.BASE_URL}images/kitchen.jpg`, alt: "Kitchen" },
   { src: `${import.meta.env.BASE_URL}images/bedroom.jpg`, alt: "Bedroom" }
