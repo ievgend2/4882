@@ -16,6 +16,14 @@ const houseRulesData = [
     ],
   },
   {
+    title: "Trash & Recycling",
+    items: [
+      "Kitchen trash lives in the bin. Bagged trash goes to the lidded bin on left cide of the house.",
+      "Collection is early Monday—roll bins curbside after 7:00 PM Sunday and return by noon the next day if you're here.",
+      "Please keep lids latched; raccoons love loose bags and our HOA fines for scattered trash.",
+    ],
+  },
+  {
     title: "Kitchen & Laundry",
     items: [
       "Use the provided cutting boards and trivets to protect the counters and table surfaces.",
