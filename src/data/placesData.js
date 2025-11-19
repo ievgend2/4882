@@ -80,12 +80,12 @@ const placesData = [
     summary: "Stock the kitchen or grab beach supplies without leaving Southport/Oak Island.",
     places: [
       {
-        name: "Lowes Foods of Oak Island",
+        name: "Lowes Foods of Southport",
         description: "Full grocery with solid produce, local beer on tap, and a great deli section.",
-        distanceMiles: 4.9,
-        driveMinutes: 9,
-        lat: 33.973582,
-        lng: -78.132666,
+        distanceMiles: 1.5,
+        driveMinutes: 7,
+        lat: 33.955735,
+        lng: -78.050627,
       },
       {
         name: "Southport IGA",
