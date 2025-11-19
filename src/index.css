@@ -482,6 +482,25 @@ main {
   gap: 1rem;
 }
 
+.stay-essentials {
+  display: grid;
+  gap: 1.25rem;
+}
+
+.stay-essentials ul {
+  padding-left: 1.25rem;
+  margin: 0;
+  color: #1e293b;
+}
+
+.stay-essentials li + li {
+  margin-top: 0.45rem;
+}
+
+.emergency-card strong {
+  color: #0f172a;
+}
+
 .wifi-header {
   display: flex;
   flex-wrap: wrap;

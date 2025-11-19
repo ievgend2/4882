@@ -153,6 +153,35 @@ function Home() {
         </div>
       </section>
 
+      <section className="info-card stay-essentials">
+        <article className="essentials-card">
+          <h3>Climate & Comfort</h3>
+          <ul>
+            <li>Thermostat in the main hallway—keep between <strong>68°–75°F</strong> to protect the HVAC. One click toggles heat vs. cool.</li>
+            <li>Ceiling fans are remote controlled (labelled by room). Please switch them off when you leave.</li>
+            <li>Tankless water heater provides endless hot water; if it cools, pause for 30 seconds and turn the handle fully to hot.</li>
+          </ul>
+        </article>
+
+        <article className="essentials-card">
+          <h3>Supplies We Stock</h3>
+          <ul>
+            <li>Pantry starter kit: coffee, tea, filters, olive oil, seasonings, foil/plastic wrap, dishwasher pods.</li>
+            <li>Bath amenities: shampoo/conditioner, body wash, make-up towels, cotton swabs, hair dryer, and a first-aid kit under the vanity.</li>
+            <li>Beach gear: four chairs, umbrella, cooler, boogie boards, and beach towels—find them on the garage rack.</li>
+          </ul>
+        </article>
+
+        <article className="essentials-card emergency-card">
+          <h3>Emergency & Transport</h3>
+          <ul>
+            <li><strong>Emergency:</strong> Dial 911. Southport Fire Station #2 (3.5 mi) and Brunswick Medical Center (15 mi) are the closest.</li>
+            <li><strong>Urgent Care:</strong> Novant Health Express, 4721 Southport-Supply Rd SE (8 min drive). CVS at 5006 Southport Crossing Way is open late.</li>
+            <li><strong>Transportation:</strong> Bald Head Island Ferry runs hourly (check baldheadisland.com). Closest EV charger: 111 W Brown St public lot.</li>
+          </ul>
+        </article>
+      </section>
+
       {selectedImage && (
         <div
           className="modal-overlay"
