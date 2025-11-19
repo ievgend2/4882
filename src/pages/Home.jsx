@@ -9,8 +9,10 @@ const galleryImages = [
 
 function Home() {
   const [activeIndex, setActiveIndex] = useState(null);
+  const [hasCopiedWifi, setHasCopiedWifi] = useState(false);
   const selectedImage =
     activeIndex !== null ? galleryImages[activeIndex] : null;
+  const wifiQRCode = `${import.meta.env.BASE_URL}images/wifi-qr.png`;
 
   useEffect(() => {
     const handleKeyDown = (event) => {
@@ -47,6 +49,16 @@ function Home() {
 
   const showNext = () => {
     setActiveIndex((prev) => (prev + 1) % galleryImages.length);
+  };
+
+  const handleCopyWifi = async () => {
+    try {
+      await navigator.clipboard.writeText("1234Oakwood!");
+      setHasCopiedWifi(true);
+      setTimeout(() => setHasCopiedWifi(false), 2000);
+    } catch (error) {
+      setHasCopiedWifi(false);
+    }
   };
 
   return (
@@ -91,12 +103,54 @@ function Home() {
         </ul>
       </section>
 
-      <section className="info-card">
-        <h3>Parking</h3>
-        <p>
-          Please park in the driveway spaces only. Street parking is not allowed per  guidelines, so kindly stay
-          within the driveway or garage area to avoid violations.
-        </p>
+      <section className="arrival-grid">
+        <article className="info-card arrival-card">
+          <h3>Before You Arrive</h3>
+          <ul className="arrival-list">
+            <li>Self check-in begins at 4:00 PM—request early check-in in the Airbnb app and we’ll confirm if available.</li>
+            <li>Your personal smart-lock code arrives in your Airbnb inbox the morning of arrival; have a photo ID handy.</li>
+            <li>Text us when you’re 30 minutes out so we can ensure the porch lights and climate are dialed in.</li>
+          </ul>
+        </article>
+
+        <article className="info-card arrival-card">
+          <h3>Driving & Parking</h3>
+          <p>
+            From downtown Southport, head west on E Moore, turn left on NC-211, then right on Abbington Oaks Way SE—the home is on the
+            left at <strong>4882</strong> with the cedar planter box.
+          </p>
+          <ul className="arrival-list">
+            <li>Use the circular driveway—there’s room for <strong>3 cars</strong>; additional vehicles can stage in the garage.</li>
+            <li>Please avoid street parking to keep HOA neighbors happy and ensure trash pick-up clears the road.</li>
+            <li>Boat trailers may park on the gravel pad along the right fence—let us know beforehand.</li>
+          </ul>
+        </article>
+      </section>
+
+      <section className="info-card wifi-card">
+        <div className="wifi-header">
+          <div>
+            <h3>Wi-Fi Access</h3>
+            <p>Scan or tap to connect instantly upon arrival.</p>
+          </div>
+          <button type="button" className="copy-button" onClick={handleCopyWifi}>
+            {hasCopiedWifi ? "Copied!" : "Copy Password"}
+          </button>
+        </div>
+        <div className="wifi-content">
+          <div className="wifi-credentials">
+            <div>
+              <span className="label">Network</span>
+              <strong>4882Guest</strong>
+            </div>
+            <div>
+              <span className="label">Password</span>
+              <strong>1234Oakwood!</strong>
+            </div>
+            <p className="qr-note">QR encodes the Wi-Fi credentials (WPA2). Aim your phone’s camera to join.</p>
+          </div>
+          <img src={wifiQRCode} alt="Wi-Fi QR code for 4882Guest" className="wifi-qr" />
+        </div>
       </section>
 
       {selectedImage && (
