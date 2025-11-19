@@ -40,11 +40,11 @@ const houseRulesData = [
     ],
   },
   {
-    title: "Pets & Outdoor Spaces",
+    title: "Pet Policy & Outdoor Spaces",
     items: [
-      "Pre-approved pets are welcome—please keep them off the furniture when possible and use the throws provided.",
-      "Always pick up pet waste right away and dispose of bags in the outside bin next to the driveway.",
-      "Outdoor areas are open until 10:00 PM. Keep conversations low to respect neighbors.",
+      "We love animals, but to protect guests with allergies there are strictly no pets allowed. Unauthorized pets incur a $300 deep-clean fee.",
+      "Registered service animals are welcome—please notify us before arrival so we can prepare and share extra cleaning steps.",
+      "Outdoor areas are open until 10:00 PM. Keep conversations low to respect neighbors and HOA guidelines.",
     ],
   },
 ];
