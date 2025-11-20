@@ -53,7 +53,7 @@ const howToData = [
     steps: [
       "Open Wi-Fi settings on your phone, tablet, or laptop.",
       "Select the network “OakwoodGuest”.",
-      "Enter the password “1234Oakwood!” exactly as written (case-sensitive).",
+      "Enter the password “1234Southport!” exactly as written (case-sensitive).",
       "If the connection fails, toggle Wi-Fi off and on and try again.",
       "If you still have issues, please text us.",
     ],

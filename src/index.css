@@ -123,6 +123,46 @@ main {
   font-size: 1.25rem;
 }
 
+.gallery-section {
+  display: grid;
+  gap: 1rem;
+}
+
+.gallery-heading h2 {
+  margin: 0 0 0.15rem;
+}
+
+.gallery-heading p {
+  margin: 0;
+  color: #475569;
+}
+
+.gallery-layout {
+  display: grid;
+  gap: 1.25rem;
+}
+
+.gallery-details ul {
+  padding-left: 1.25rem;
+  margin: 0 0 1rem;
+  color: #1e293b;
+}
+
+.gallery-details li + li {
+  margin-top: 0.35rem;
+}
+
+.gallery-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 0.75rem;
+}
+
+.gallery-stats strong {
+  display: block;
+  font-size: 1.15rem;
+}
+
 .gallery-grid {
   --gallery-gap: 0.9rem;
   display: flex;
@@ -594,6 +634,13 @@ main {
   gap: 0.6rem;
 }
 
+.wifi-qr-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.3rem;
+}
+
 .wifi-credentials .label {
   display: block;
   font-size: 0.85rem;
@@ -653,6 +700,11 @@ main {
 
   .arrival-grid {
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  }
+
+  .gallery-layout {
+    grid-template-columns: 2fr 1fr;
+    align-items: stretch;
   }
 }
 

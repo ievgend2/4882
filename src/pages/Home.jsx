@@ -53,7 +53,7 @@ function Home() {
 
   const handleCopyWifi = async () => {
     try {
-      await navigator.clipboard.writeText("1234Oakwood!");
+      await navigator.clipboard.writeText("1234Southport!");
       setHasCopiedWifi(true);
       setTimeout(() => setHasCopiedWifi(false), 2000);
     } catch (error) {
@@ -71,36 +71,50 @@ function Home() {
         </p>
       </div>
 
-      <section className="info-card gallery-card">
-        <h3>Photo Highlights</h3>
-        <div className="gallery-grid">
-          {galleryImages.map((img, index) => (
-            <button
-              key={img.src}
-              type="button"
-              className="gallery-thumb"
-              onClick={() => handleImageClick(index)}
-              aria-label={`Enlarge ${img.alt}`}
-            >
-              <img src={img.src} alt={img.alt} />
-            </button>
-          ))}
+      <section className="gallery-section">
+        <div className="gallery-heading">
+          <h2>Photo Gallery</h2>
+          <p>Scroll through a few of our favorite corners—the slider below opens larger views with a tap.</p>
         </div>
-      </section>
-
-      <section className="info-card">
-        <h3>Quick Facts</h3>
-        <ul>
-          <li>
-            Wi-Fi name: <strong>4882Guest</strong>
-          </li>
-          <li>
-            Wi-Fi password: <strong>1234Oakwood!</strong>
-          </li>
-          <li>Quiet hours: 10 PM – 8 AM</li>
-          <li>Check-in: 4 PM</li>
-          <li>Check-out: 11 AM</li>
-        </ul>
+        <div className="gallery-layout">
+          <article className="info-card gallery-card">
+            <div className="gallery-grid">
+              {galleryImages.map((img, index) => (
+                <button
+                  key={img.src}
+                  type="button"
+                  className="gallery-thumb"
+                  onClick={() => handleImageClick(index)}
+                  aria-label={`Enlarge ${img.alt}`}
+                >
+                  <img src={img.src} alt={img.alt} />
+                </button>
+              ))}
+            </div>
+          </article>
+          <aside className="info-card gallery-details">
+            <h3>What Guests Love</h3>
+            <ul>
+              <li>Open-concept kitchen with an oversized island for family breakfasts.</li>
+              <li>Sunroom overlooking the pines—perfect for morning coffee or remote work.</li>
+              <li>Two king suites plus a bunk room, all with blackout shades and ceiling fans.</li>
+            </ul>
+            <div className="gallery-stats">
+              <div>
+                <span className="label">Sleeps</span>
+                <strong>8 Guests</strong>
+              </div>
+              <div>
+                <span className="label">Beds</span>
+                <strong>4 Beds</strong>
+              </div>
+              <div>
+                <span className="label">Baths</span>
+                <strong>3 Full</strong>
+              </div>
+            </div>
+          </aside>
+        </div>
       </section>
 
       <section className="arrival-grid">
@@ -145,11 +159,14 @@ function Home() {
             </div>
             <div>
               <span className="label">Password</span>
-              <strong>1234Oakwood!</strong>
+              <strong>1234Southport!</strong>
             </div>
-            <p className="qr-note">QR encodes the Wi-Fi credentials (WPA2). Aim your phone’s camera to join.</p>
+            <p className="qr-note">Scan the QR or copy the password above to connect instantly.</p>
           </div>
-          <img src={wifiQRCode} alt="Wi-Fi QR code for 4882Guest" className="wifi-qr" />
+          <div className="wifi-qr-wrapper">
+            <img src={wifiQRCode} alt="Wi-Fi QR code for 4882Guest" className="wifi-qr" />
+            <span className="label">Best scanned 4–6 ft away</span>
+          </div>
         </div>
       </section>
 
