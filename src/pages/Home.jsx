@@ -1,50 +1,62 @@
 import { useState } from "react";
 
 const galleryBase = `${import.meta.env.BASE_URL}images/airbnb/`;
+const galleryWebpBase = `${import.meta.env.BASE_URL}images/airbnb-webp/`;
 
 const galleryImages = [
   {
-    src: `${galleryBase}living%20room%201.jpg`,
+    jpg: `${galleryBase}living%20room%201.jpg`,
+    webp: `${galleryWebpBase}living%20room%201.webp`,
     alt: "Living room sectional with natural light and wall art",
   },
   {
-    src: `${galleryBase}living%20room%202.jpg`,
+    jpg: `${galleryBase}living%20room%202.jpg`,
+    webp: `${galleryWebpBase}living%20room%202.webp`,
     alt: "Living room detail with accent chairs and smart TV",
   },
   {
-    src: `${galleryBase}exterior.jpg`,
+    jpg: `${galleryBase}exterior.jpg`,
+    webp: `${galleryWebpBase}exterior.webp`,
     alt: "Front exterior of 4882 Retreat at dusk",
   },
   {
-    src: `${galleryBase}kitchen%201.jpg`,
+    jpg: `${galleryBase}kitchen%201.jpg`,
+    webp: `${galleryWebpBase}kitchen%201.webp`,
     alt: "Kitchen overview featuring oversized island seating",
   },
   {
-    src: `${galleryBase}kitchen%202.jpg`,
+    jpg: `${galleryBase}kitchen%202.jpg`,
+    webp: `${galleryWebpBase}kitchen%202.webp`,
     alt: "Kitchen detail showing range, hood, and quartz counters",
   },
   {
-    src: `${galleryBase}kitchen%203.jpg`,
+    jpg: `${galleryBase}kitchen%203.jpg`,
+    webp: `${galleryWebpBase}kitchen%203.webp`,
     alt: "Kitchen coffee bar with brewer and open shelving",
   },
   {
-    src: `${galleryBase}dining%20room.jpg`,
+    jpg: `${galleryBase}dining%20room.jpg`,
+    webp: `${galleryWebpBase}dining%20room.webp`,
     alt: "Dining room table set for six guests",
   },
   {
-    src: `${galleryBase}master%20bedroom%201.jpg`,
+    jpg: `${galleryBase}master%20bedroom%201.jpg`,
+    webp: `${galleryWebpBase}master%20bedroom%201.webp`,
     alt: "Primary bedroom with king bed and reading lamps",
   },
   {
-    src: `${galleryBase}queen%20bedroom%201.jpg`,
+    jpg: `${galleryBase}queen%20bedroom%201.jpg`,
+    webp: `${galleryWebpBase}queen%20bedroom%201.webp`,
     alt: "Queen bedroom featuring board and batten accent wall",
   },
   {
-    src: `${galleryBase}guest%20bedroom.jpg`,
+    jpg: `${galleryBase}guest%20bedroom.jpg`,
+    webp: `${galleryWebpBase}guest%20bedroom.webp`,
     alt: "Guest bedroom with twin beds and nightstand",
   },
   {
-    src: `${galleryBase}master%20bathroom%201.jpg`,
+    jpg: `${galleryBase}master%20bathroom%201.jpg`,
+    webp: `${galleryWebpBase}master%20bathroom%201.webp`,
     alt: "Primary bath dual vanity with gold fixtures",
   },
 ];
@@ -128,7 +140,17 @@ function Home() {
               >
                 ‹
               </button>
-              <img src={highlightedImage.src} alt={highlightedImage.alt} />
+              <picture>
+                <source srcSet={highlightedImage.webp} type="image/webp" />
+                <source srcSet={highlightedImage.jpg} type="image/jpeg" />
+                <img
+                  src={highlightedImage.jpg}
+                  alt={highlightedImage.alt}
+                  loading="eager"
+                  fetchpriority="high"
+                  decoding="async"
+                />
+              </picture>
               <button
                 type="button"
                 className="hero-nav hero-nav--next"
@@ -144,7 +166,7 @@ function Home() {
             <div className="hero-thumbs">
               {galleryImages.map((img, index) => (
                 <button
-                  key={img.src}
+                  key={img.jpg}
                   type="button"
                   className={`hero-thumb${
                     index === galleryIndex ? " is-active" : ""
@@ -152,7 +174,18 @@ function Home() {
                   onClick={() => setGalleryIndex(index)}
                   aria-label={`Preview ${img.alt}`}
                 >
-                  <img src={img.src} alt="" aria-hidden="true" />
+                  <picture>
+                    <source srcSet={img.webp} type="image/webp" />
+                    <source srcSet={img.jpg} type="image/jpeg" />
+                    <img
+                      src={img.jpg}
+                      alt=""
+                      aria-hidden="true"
+                      loading="lazy"
+                      decoding="async"
+                      fetchpriority="low"
+                    />
+                  </picture>
                 </button>
               ))}
             </div>
@@ -232,6 +265,9 @@ function Home() {
               src={wifiQRCode}
               alt="Wi-Fi QR code for 4882Guest"
               className="wifi-qr"
+              loading="lazy"
+              decoding="async"
+              fetchpriority="low"
             />
           </div>
         </div>
