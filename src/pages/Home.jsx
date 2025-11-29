@@ -1,49 +1,51 @@
 import { useState } from "react";
 
+const galleryBase = `${import.meta.env.BASE_URL}images/airbnb/`;
+
 const galleryImages = [
   {
-    src: `${import.meta.env.BASE_URL}images/img/1.webp`,
-    alt: "Aerial view looking north over 4882 Retreat",
+    src: `${galleryBase}exterior.jpg`,
+    alt: "Front exterior of 4882 Retreat at dusk",
   },
   {
-    src: `${import.meta.env.BASE_URL}images/img/2.webp`,
-    alt: "Aerial view looking south across the property",
+    src: `${galleryBase}living%20room%201.jpg`,
+    alt: "Living room sectional with natural light and wall art",
   },
   {
-    src: `${import.meta.env.BASE_URL}images/img/3.webp`,
-    alt: "Aerial crow’s nest perspective of the backyard",
+    src: `${galleryBase}living%20room%202.jpg`,
+    alt: "Living room detail with accent chairs and smart TV",
   },
   {
-    src: `${import.meta.env.BASE_URL}images/img/4.webp`,
-    alt: "Front facing aerial showing the driveway",
+    src: `${galleryBase}kitchen%201.jpg`,
+    alt: "Kitchen overview featuring oversized island seating",
   },
   {
-    src: `${import.meta.env.BASE_URL}images/img/5.webp`,
-    alt: "Rear aerial with star marker highlighting the home",
+    src: `${galleryBase}kitchen%202.jpg`,
+    alt: "Kitchen detail showing range, hood, and quartz counters",
   },
   {
-    src: `${import.meta.env.BASE_URL}images/img/6.webp`,
-    alt: "Upper kitchen view with island seating",
+    src: `${galleryBase}kitchen%203.jpg`,
+    alt: "Kitchen coffee bar with brewer and open shelving",
   },
   {
-    src: `${import.meta.env.BASE_URL}images/img/7.webp`,
-    alt: "Kitchen island detail showing appliances and stools",
+    src: `${galleryBase}dining%20room.jpg`,
+    alt: "Dining room table set for six guests",
   },
   {
-    src: `${import.meta.env.BASE_URL}images/dining.jpg`,
-    alt: "Dining room table with seating for six",
+    src: `${galleryBase}master%20bedroom%201.jpg`,
+    alt: "Primary bedroom with king bed and reading lamps",
   },
   {
-    src: `${import.meta.env.BASE_URL}images/kitchen.jpg`,
-    alt: "Kitchen overview with stainless appliances",
+    src: `${galleryBase}queen%20bedroom%201.jpg`,
+    alt: "Queen bedroom featuring board and batten accent wall",
   },
   {
-    src: `${import.meta.env.BASE_URL}images/bedroom.jpg`,
-    alt: "Primary bedroom with king bed",
+    src: `${galleryBase}guest%20bedroom.jpg`,
+    alt: "Guest bedroom with twin beds and nightstand",
   },
   {
-    src: `${import.meta.env.BASE_URL}images/front.jpeg`,
-    alt: "Front exterior of the home",
+    src: `${galleryBase}master%20bathroom%201.jpg`,
+    alt: "Primary bath dual vanity with gold fixtures",
   },
 ];
 
