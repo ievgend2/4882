@@ -792,4 +792,8 @@ main {
   .main-nav a.active {
     border-radius: 18px;
   }
+
+  .hero-thumbs {
+    display: none;
+  }
 }

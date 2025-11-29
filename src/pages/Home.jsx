@@ -4,16 +4,16 @@ const galleryBase = `${import.meta.env.BASE_URL}images/airbnb/`;
 
 const galleryImages = [
   {
-    src: `${galleryBase}exterior.jpg`,
-    alt: "Front exterior of 4882 Retreat at dusk",
-  },
-  {
     src: `${galleryBase}living%20room%201.jpg`,
     alt: "Living room sectional with natural light and wall art",
   },
   {
     src: `${galleryBase}living%20room%202.jpg`,
     alt: "Living room detail with accent chairs and smart TV",
+  },
+  {
+    src: `${galleryBase}exterior.jpg`,
+    alt: "Front exterior of 4882 Retreat at dusk",
   },
   {
     src: `${galleryBase}kitchen%201.jpg`,
